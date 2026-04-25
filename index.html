@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Chat</title>
+</head>
+<body>
+  <h2>Chat App</h2>
+  <textarea id="chat" rows="10" cols="30" readonly></textarea><br>
+  <input id="msg" placeholder="Type message">
+  <button onclick="send()">Send</button>
+
+  <script>
+    function send() {
+      let msg = document.getElementById("msg").value;
+      let chat = document.getElementById("chat");
+      chat.value += "You: " + msg + "\n";
+      document.getElementById("msg").value = "";
+    }
+  </script>
+</body>
+</html>
